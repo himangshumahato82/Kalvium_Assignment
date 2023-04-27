@@ -40,6 +40,7 @@ draggableElem.addEventListener(events[deviceType].down, (e) => {
   //initial x and y points
   initialX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
   initialY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
+  console.log(e.clientX,e.clientY)
 
   //Start movement
   moveElement = true;
@@ -52,12 +53,14 @@ draggableElem.addEventListener(events[deviceType].move, (e) => {
     e.preventDefault();
     let newX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
     let newY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
+    console.log( draggableElem.style.left,draggableElem.offsetLeft,initialX,newX)
     draggableElem.style.top =
       draggableElem.offsetTop - (initialY - newY) + "px";
     draggableElem.style.left =
       draggableElem.offsetLeft - (initialX - newX) + "px";
     initialX = newX;
     initialY = newY;
+   
   }
 });
 
@@ -70,6 +73,4 @@ draggableElem.addEventListener(
 );
 
 draggableElem.addEventListener("mouseleave", stopMovement);
-draggableElem.addEventListener(events[deviceType].up, (e) => {
-  moveElement = false;
-});
+

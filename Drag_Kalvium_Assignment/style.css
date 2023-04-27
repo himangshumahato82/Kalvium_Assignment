@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  background: linear-gradient(135deg, #a3f1ad, #6414e9);
+  background: linear-gradient(180deg, #26ac37, #e23808);
 }
 
 #container {
@@ -11,15 +11,13 @@ body {
   /* border: 2px solid teal; */
 }
 #child_container{
-  
-  border: 2px solid teal;
+  /* border: 2px solid teal; */
   position: absolute;
   background-color: #d23b3b;
-  font-size: 1.6em;
-  width: 7em;
-  height: 7em;
-  /* position: absolute; */
-  transform: translate(-50%, -50%);
+  font-size: 35px;
+  width: 200px;
+  height: 200px;
+   transform: translate(-50%, -50%); 
   left: 50%;
   top: 50%;
   display:grid; 
